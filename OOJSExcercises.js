@@ -47,9 +47,33 @@ window.onload = function() {
 			document.getElementById("krproperties").appendChild(n);
 		}
 	};
+
+
+// 3. Create an object called  Multiplier  with two methods:  multiply  and  getCurrentValue .  if you do
+// var m = new Multiplier(6), returns 6.
+// then console.log(m.getCurrentValue()); should return 6
+// then m.multiply() returns 6
+// m.multiply(7) returns 42
+// m.getCurrentValue should return 42
+
+function Multiplier(num){
+	//return the number supplied when a Multiplier object was created
+	this.multiply = function() { return num * 1
+
+	};
+	this.getCurrentValue = function() {
+		return num
+	};
+	
+}
+
+
+
+//this } is the end of the window onload function
 };
 
-// 3. Create an object called  Multiplier  with two methods:  multiply  and  getCurrentValue .  multiply  should initially
-// return the number supplied * 1 and from then on whatever the current value is times the number supplied.
-//  getCurrentValue  should return the last answer returned from multiply.
+
+
+
+
 
