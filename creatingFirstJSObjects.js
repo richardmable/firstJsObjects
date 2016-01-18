@@ -99,17 +99,3 @@ var phone = new IPhone(5, 6, true, "black");
 alert(phone.phone_is());
 alert(phone.isIphone());
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
