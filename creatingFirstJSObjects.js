@@ -66,6 +66,40 @@ alert(my_coffee.drunk());
 //print to console so that we can see that changes were made from the pre-prototyping the object
 console.log(my_coffee);
 
+//prototypical objects
+//one object can start out with another as its template
+
+function Cellphone(screen_size, phone_size, wifi, phone_color){
+	this.screen_size = screen_size;
+	this.phone_size = phone_size;
+	this.wifi = wifi;
+	this.phone_color = phone_color;
+	this.phone_is = function(){
+		return this.screen_size + " inch screen, " + this.phone_size + " inch phone, " + (this.wifi ? " has wifi, " : " no wifi, ") + this.phone_color + " colored phone.";
+	}
+};
+
+//create the object that inherits from Cellphone
+//pass in arguments if desired (they are not there automatically)
+//capitalize first letter of functions
+function IPhone(screen_size, phone_size, wifi, phone_color){
+	//these are the two new attributes added, using iPhone constructor
+	this.iPhone = true
+	this.isIphone = function(){
+		return (this.iPhone ? "This is an iPhone" : "This is not an iPhone");
+	}
+	//apply the traits of cellphone to iPhone
+	Cellphone.apply(this, [screen_size, phone_size, wifi, phone_size]);
+};
+
+
+//create the new object with the traits of a cellphone
+var phone = new IPhone(5, 6, true, "black");
+//print alerts to check
+alert(phone.phone_is());
+alert(phone.isIphone());
+
+
 
 
 
